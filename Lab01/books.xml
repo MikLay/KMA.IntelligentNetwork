@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<x:books xmlns:x="urn:books"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="urn:books books.xsd">
+    <book id="b1">
+        <author>Michael Fediuchenko</author>
+        <title>The First Book</title>
+        <genre>Fiction</genre>
+        <price>50</price>
+        <pub_date>2000-10-06</pub_date>
+        <ukr-rating>85</ukr-rating>
+        <imda-rating>100</imda-rating>
+        <review>Nothing to say</review>
+    </book>
+
+    <book id="b2">
+        <author>Michael Fediuchenko</author>
+        <title>The Second Book</title>
+        <genre>Fiction</genre>
+        <price>44.95</price>
+        <pub_date>2000-10-03</pub_date>
+        <ukr-rating>85</ukr-rating>
+        <imda-rating>100</imda-rating>
+        <review>An amazing story of nothing.</review>
+    </book>
+
+    <book id="b3">
+        <author>Michael Fediuchenko</author>
+        <title>The Third Book</title>
+        <genre>Fiction</genre>
+        <price>20</price>
+        <pub_date>2000-10-02</pub_date>
+        <ukr-rating>85</ukr-rating>
+        <imda-rating>100</imda-rating>
+        <review>Finally it was written</review>
+    </book>
+
+</x:books>
