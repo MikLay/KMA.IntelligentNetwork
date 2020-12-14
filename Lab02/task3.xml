@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <rdf:Description rdf:about="http://www.w3.org/">
+        <dcx:descriptionSet
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:dcx="http://purl.org/dc/xml/">
+            <dcx:description dcx:resourceURI="https://dou.ua/lenta/columns/no-code-and-less-code/">
+
+                <dc:title>
+                    No Code стратегія: як я шукав золоту середину
+                </dc:title>
+                <dc:creator>
+                    Рома Севастьянов
+                </dc:creator>
+                <dc:date>
+                    9-12-2020
+                </dc:date>
+                <dc:language>
+                    ua
+                </dc:language>
+                <dc:subject>
+                    Я розповім про свій досвід створення онлайн-бізнесів за допомогою No Code інструментів. Якщо теж
+                    розглядаєте No Code як частину свого технічного стеку — ви відкрили правильну статтю.
+                </dc:subject>
+            </dcx:description>
+        </dcx:descriptionSet>
+    </rdf:Description>
+</rdf:RDF>

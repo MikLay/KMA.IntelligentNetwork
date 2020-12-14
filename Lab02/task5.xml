@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="http://example.org/schemas/school157"
+    xmlns:base="http://example.org/schemas/school157">
+
+    <rdf:Description rdf:ID="Person">
+        <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="Teacher">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="Director">
+        <rdfs:subClassOf rdf:resource="#Teacher"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="Student">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+        <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="Class">
+        <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="Subject">
+        <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="sport">
+        <rdf:type rdf:resource="#Subject"/>
+        <dc:title>Sport</dc:title>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="class1">
+        <rdf:type rdf:resource="#Class"/>
+        <dc:title>Class 1</dc:title>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="class2">
+        <rdf:type rdf:resource="#Class"/>
+        <dc:title>Class 2</dc:title>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="class3">
+        <rdf:type rdf:resource="#Class"/>
+        <dc:learn rdf:resource="#sport"/>
+        <dc:title>Class 3</dc:title>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="dmytroO">
+        <rdf:type rdf:resource="#Teacher"/>
+        <dc:title>Dmytro_Olegovych</dc:title>
+        <dc:teaches rdf:resource="#class2"/>
+        <dc:teaches rdf:resource="#class3"/>
+        <dc:teaches rdf:resource="#sport"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="olenaG">
+        <rdf:type rdf:resource="#Teacher"/>
+        <dc:title>Olena_Genadyyvna</dc:title>
+        <dc:teaches rdf:resource="#class1"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="olexandrP">
+        <rdf:type rdf:resource="#Director"/>
+        <dc:title>Olexandr_Petrovuch</dc:title>
+        <dc:teaches rdf:resource="#class2"/>
+        <dc:teaches rdf:resource="#class3"/>
+    </rdf:Description>
+
+</rdf:RDF>

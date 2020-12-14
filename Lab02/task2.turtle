@@ -1,0 +1,32 @@
+ex:Person rdf:type rdfs:Class .
+ex:Director rdf:type rdfs:Class .
+ex:Movie rdf:type rdfs:Class .
+ex:Actor rdf:type rdfs:Class .
+ex:Actor rdfs:subClassOf ex:Person .
+ex:Director rdfs:subClassOf ex:Person .
+exthings:jackson rdf:type ex:Director
+ex:name rdf:type rdfs:Property
+ex:name rdfs:range ex:Person
+
+
+ex:stars rdf:type rdfs:Property
+ex:directs rdf:type rdfs:Property
+ex:title rdf:type rdfs:Property
+ex:year rdf:type rdfs:Property
+
+ex:stars rdfs:range ex:Actor
+ex:year rdfs:range ex:Movie
+ex:title rdfs:range ex:Movie
+ex:directs rdfs:range ex:Director
+ex:stars rdfs:range ex:Movie
+
+exthings:hobbit rdf:type ex:Movie
+
+exthings:jackson rdfs:directs exthings:hobbit
+exthings:"The Hobbit" rdfs:title exthings:hobbit
+exthings:2012 rdfs:year exthings:hobbit 
+exthings:freeman rdfs:stars exthings:hobbit
+exthings:"Martin Freeman" rdfs:name exthings:freeman
+
+exthings:mckellan rdfs:stars exthings:hobbit
+exthings:"Ian McKellan" rdfs:name exthings:mckellan
