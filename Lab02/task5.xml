@@ -1,9 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE rdf:RDF [<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">]>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="http://example.org/schemas/school157"
-    xmlns:base="http://example.org/schemas/school157">
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="http://example.org/rdf-schemas/school-157"
+>
+
+    <rdf:Property rdf:ID="subject">
+        <rdfs:domain rdf:resource="#Subject"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:ID="students">
+        <rdfs:domain rdf:resource="#Student"/>
+    </rdf:Property>
 
     <rdf:Description rdf:ID="Person">
         <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
@@ -12,6 +20,7 @@
     <rdf:Description rdf:ID="Teacher">
         <rdfs:subClassOf rdf:resource="#Person"/>
         <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+        <rdf:Property rdf:resource="#subject"/>
     </rdf:Description>
 
     <rdf:Description rdf:ID="Director">
@@ -24,12 +33,29 @@
         <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
     </rdf:Description>
 
-    <rdf:Description rdf:ID="Class">
+    <rdf:Description rdf:ID="Grade">
         <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+        <rdf:Property rdf:resource="#students"/>
     </rdf:Description>
 
     <rdf:Description rdf:ID="Subject">
         <rdf:type rdf:resource="http://www.w3.org/2000/0l/rdf-schema#Class"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="class1">
+        <rdf:type rdf:resource="#Grade"/>
+        <dc:title>Class 1</dc:title>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="class2">
+        <rdf:type rdf:resource="#Grade"/>
+        <dc:title>Class 2</dc:title>
+    </rdf:Description>
+
+    <rdf:Description rdf:ID="class3">
+        <rdf:type rdf:resource="#Grade"/>
+        <dc:learn rdf:resource="#sport"/>
+        <dc:title>Class 3</dc:title>
     </rdf:Description>
 
     <rdf:Description rdf:ID="sport">
@@ -37,39 +63,23 @@
         <dc:title>Sport</dc:title>
     </rdf:Description>
 
-    <rdf:Description rdf:ID="class1">
-        <rdf:type rdf:resource="#Class"/>
-        <dc:title>Class 1</dc:title>
-    </rdf:Description>
-
-    <rdf:Description rdf:ID="class2">
-        <rdf:type rdf:resource="#Class"/>
-        <dc:title>Class 2</dc:title>
-    </rdf:Description>
-
-    <rdf:Description rdf:ID="class3">
-        <rdf:type rdf:resource="#Class"/>
-        <dc:learn rdf:resource="#sport"/>
-        <dc:title>Class 3</dc:title>
-    </rdf:Description>
-
-    <rdf:Description rdf:ID="dmytroO">
+    <rdf:Description rdf:ID="DO1">
         <rdf:type rdf:resource="#Teacher"/>
-        <dc:title>Dmytro_Olegovych</dc:title>
+        <dc:title>Дмитро Олегович</dc:title>
         <dc:teaches rdf:resource="#class2"/>
         <dc:teaches rdf:resource="#class3"/>
-        <dc:teaches rdf:resource="#sport"/>
+        <rdf:subject rdf:resource="#sport"/>
     </rdf:Description>
 
-    <rdf:Description rdf:ID="olenaG">
+    <rdf:Description rdf:ID="OG1">
         <rdf:type rdf:resource="#Teacher"/>
-        <dc:title>Olena_Genadyyvna</dc:title>
+        <dc:title>Олена Генадіївна</dc:title>
         <dc:teaches rdf:resource="#class1"/>
     </rdf:Description>
 
-    <rdf:Description rdf:ID="olexandrP">
+    <rdf:Description rdf:ID="OP1">
         <rdf:type rdf:resource="#Director"/>
-        <dc:title>Olexandr_Petrovuch</dc:title>
+        <dc:title>Олександр Петрович</dc:title>
         <dc:teaches rdf:resource="#class2"/>
         <dc:teaches rdf:resource="#class3"/>
     </rdf:Description>

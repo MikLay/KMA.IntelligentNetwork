@@ -46,7 +46,7 @@ ex‘.Person rdf: type rdfs: Class , ex:author rdf:type rdf:Property , ex:author
 ``
 ex:hasMother rdfs:range ex:Female , ex:hasMother rdfs: range ex .-Person .``
 
-Властивість rdfs: range може бути використана також для гого, щоб позначити значення деякої властивості як літерал. Наприклад:
+Властивість rdfs: range може бути використана також для того, щоб позначити значення деякої властивості як літерал. Наприклад:
 ``    ex:age rdf:type rdf:Property , ex:age rdfs:range xsd:integer .
 ``
 
