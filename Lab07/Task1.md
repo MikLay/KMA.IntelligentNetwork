@@ -1,11 +1,10 @@
 Виконую налаштування Hadoop-3.3.0
 
-![](..//media/image1.png)
-![](..//media/image2.png)
+![](..//media/afa.png)
+![](..//media/arab.png)
 
-![](..//media/image3.png)
+![](..//media/ffff.png)
 
-![](..//media/image4.png)
 
 Запуст hdfs namemode -format![](..//media/image5.png)
 
